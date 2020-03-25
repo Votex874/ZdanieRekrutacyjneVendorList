@@ -1,0 +1,66 @@
+body {
+  background: #ffa;
+  overflow: auto;
+  .popup {
+    position: absolute;
+    display: none;
+    top: calc(50% - 250px);
+    left: calc(50% - 250px);
+    width: 500px;
+    height: 500px;
+    background-color: #ffa;
+    &__title {
+      font-size: 24px;
+      text-align: center;
+    }
+
+    &__buttons-container {
+      display: flex;
+      width: 100%;
+      margin-top: 80px;
+      justify-content: space-around;
+    }
+
+    &__list {
+      overflow: auto;
+      height: 250px;
+    }
+
+    &__item {
+      display: flex;
+      flex-direction: column;
+
+      &-button {
+        width: 100px;
+        justify-self: flex-start;
+        margin-top: 20px;
+        &--active {
+          background: #00ff00;
+          color: #fff;
+          outline: none;
+          border: none;
+        }
+      }
+    }
+  }
+}
+
+.body-overflow-hidden {
+  overflow: hidden;
+  .popup {
+    display: block;
+  }
+  .background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    opacity: 0.8;
+    background: #fff;
+  }
+}
+
+.fake {
+  margin-bottom: 2000px;
+}
